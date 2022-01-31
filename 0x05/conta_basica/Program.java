@@ -55,7 +55,7 @@ public class Program {
             System.out.printf("Conta %s - saldo: %.2f\n", conta5.getNumeracao(), conta5.getSaldo());
             conta5.sacar(30);
         } catch (Exception ex) {
-            System.out.println(ex.getMessage() + "\n");
+            System.out.printf(ex.getMessage() + "\n");
         }
     }
 }
