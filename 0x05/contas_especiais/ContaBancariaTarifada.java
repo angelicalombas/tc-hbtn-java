@@ -16,7 +16,7 @@ public class ContaBancariaTarifada extends ContaBancariaBasica {
         if (valor <= 0) {
             throw new OperacaoInvalidaException("Valor para deposito deve ser maior que 0");
         }
-        saldo = saldo + valor - 0.15;
+        saldo = saldo + valor - 0.1;
 
     }
 
@@ -27,8 +27,7 @@ public class ContaBancariaTarifada extends ContaBancariaBasica {
         } else if (saldo < valor) {
             throw new OperacaoInvalidaException("Valor de saque deve ser maior que o saldo atual");
         } else {
-            saldo = saldo - valor - 0.15;
-            // saldo -= valor - 0.15;
+            saldo = saldo - valor - 0.1;
         }
     }
 
