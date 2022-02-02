@@ -1,0 +1,11 @@
+package comida;
+
+public class Lembas extends Comida{
+    public Lembas(int pontosDeFelicidade) {
+        super(pontosDeFelicidade);
+    }
+
+    public Lembas() {
+        super.pontosDeFelicidade=3;
+    }
+}
