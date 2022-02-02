@@ -1,4 +1,4 @@
-import poliExer0.produtos.Produto;
+import produtos.Produto;
 
 public class ItemPedido {
     private int quantidade;
