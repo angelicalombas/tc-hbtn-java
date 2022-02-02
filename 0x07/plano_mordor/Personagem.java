@@ -16,7 +16,7 @@ public class Personagem {
             Humor objetoHumor = new Feliz();
             return objetoHumor.getClass().getSimpleName();
         } else if (pontosDeFelicidade > 15) {
-            Humor objetoHumor = new Feliz();
+            Humor objetoHumor = new MuitoFeliz();
             return objetoHumor.getClass().getSimpleName();
         } else {
             return "";
