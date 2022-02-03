@@ -1,11 +1,11 @@
 import produtos.Produto;
 import produtos.Livro;
-import java.text.NumberFormat;
+import java.text.DecimalFormat;
 
 public class Pedido {
     private double percentualDesconto;
     private ItemPedido[] itens;
-    NumberFormat f = NumberFormat.getCurrencyInstance();
+    DecimalFormat f = new DecimalFormat("#,##0.00");
 
     public Pedido(double percentualDesconto, ItemPedido[] itens) {
         this.percentualDesconto = percentualDesconto;
