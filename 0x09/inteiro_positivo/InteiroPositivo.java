@@ -1,5 +1,5 @@
 public class InteiroPositivo {
-    public Integer valor;
+    private int valor;
 
     public InteiroPositivo(int valor) throws Exception {
         this.valor = valor;
@@ -17,7 +17,7 @@ public class InteiroPositivo {
 
     public void setValor(Integer valor) throws Exception {
         if (valor == null || valor < 0) {
-            throw new Exception("Valor nao eh um valor inteiro positivo");
+            throw new IllegalArgumentException("Valor nao eh um valor inteiro positivo");
         }
         this.valor = valor;
     }
