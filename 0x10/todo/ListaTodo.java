@@ -3,10 +3,10 @@ import java.util.Comparator;
 import java.util.List;
 
 public class ListaTodo {
-    public List<Tarefa> tarefas;
+    public List<Tarefa> tarefas = new ArrayList<>();
 
     public ListaTodo() {
-        tarefas = new ArrayList<>();
+ 
     }
 
     public void adicionarTarefa(Tarefa tarefa) throws Exception {
