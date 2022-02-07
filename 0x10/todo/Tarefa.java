@@ -26,7 +26,7 @@ public class Tarefa {
 
     public void modificarDescricao() throws Exception {
         if (getDescricao() == null || getDescricao() == "") {
-            throw new Exception("Descricao de tarefa invalida");
+            throw new IllegalArgumentException("Descricao de tarefa invalida");
         }
     }
 }

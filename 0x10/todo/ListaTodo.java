@@ -12,10 +12,10 @@ public class ListaTodo {
     public void adicionarTarefa(Tarefa tarefa) throws Exception {
         for (Tarefa tarefas : tarefas) {
             if (tarefas.getIdentificador() == tarefa.getIdentificador()) {
-                throw new Exception("Tarefa com identificador " + tarefa.getIdentificador() + " ja existente na lista");
+                throw new IllegalArgumentException("Tarefa com identificador " + tarefa.getIdentificador() + " ja existente na lista");
             }
             if (tarefa.getDescricao() == null || tarefa.getDescricao() == "") {
-                throw new Exception("Descricao de tarefa invalida");
+                throw new IllegalArgumentException("Descricao de tarefa invalida");
             }
         }
         this.tarefas.add(tarefa);
