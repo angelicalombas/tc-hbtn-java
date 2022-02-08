@@ -6,7 +6,7 @@ public class ListaTodo {
     public List<Tarefa> tarefas = new ArrayList<>();
 
     public ListaTodo() {
- 
+
     }
 
     public void adicionarTarefa(Tarefa tarefa) throws Exception {
