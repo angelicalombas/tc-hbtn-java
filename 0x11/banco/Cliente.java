@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Cliente {
     public String nome;
-    public ArrayList<Double>  transacoes;
+    public ArrayList<Double> transacoes;
 
     public Cliente(String nome, double valorTransacao) {
         this.nome = nome;
@@ -14,7 +14,7 @@ public class Cliente {
         return nome;
     }
 
-    public List<Double> getTransacoes() {
+    public ArrayList<Double> getTransacoes() {
         return transacoes;
     }
 
