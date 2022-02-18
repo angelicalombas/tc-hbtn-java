@@ -1,6 +1,6 @@
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 
 public class ListaTelefonica {
     HashMap<String, HashSet<Telefone>> listaTelefonica;
@@ -9,8 +9,6 @@ public class ListaTelefonica {
         listaTelefonica = new HashMap<>();
     }
 
-    ArrayList<Telefone> numeroLista = new ArrayList<>();
-
     public HashSet<Telefone> adicionarTelefone(String nome, Telefone telefone){
         HashSet<Telefone> telefones = new HashSet<>();
 
@@ -18,11 +16,13 @@ public class ListaTelefonica {
             throw new IllegalArgumentException("Telefone jah existente para essa pessoa");
         }
 
-        if(numeroLista.contains(telefone)){
-            throw new IllegalArgumentException("Telefone jah pertence a outra pessoa");
+        //ForEach não pode ser aplicado em Map, então para usar a HashMap listaTelefonica é necessário a conversão usando .entrySet()
+        // E usando o .entrySet também é necessário alterar o tipo da variável para Map.Entry
+        for (Map.Entry<String, HashSet<Telefone>> lista:listaTelefonica.entrySet()) {
+            if(lista.getValue().contains(telefone)) {
+                throw new IllegalArgumentException("Telefone jah pertence a outra pessoa");
+            }
         }
-
-        numeroLista.add(telefone);
 
         if (listaTelefonica.containsKey(nome)){
             //se o telefone referênte ao nome constar na lista de telefones adicione mais um
@@ -32,8 +32,7 @@ public class ListaTelefonica {
             listaTelefonica.put(nome,telefones);
         }
 
-    return telefones;
-
+        return telefones;
     }
 
     public HashSet<Telefone> buscar(String nome){
