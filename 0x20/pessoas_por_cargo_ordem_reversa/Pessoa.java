@@ -57,5 +57,6 @@ public class Pessoa implements Comparable<Pessoa>{
     public int compareTo(Pessoa pessoa) {
 
         return this.getNome().compareTo(pessoa.getNome());
+
     }
 }

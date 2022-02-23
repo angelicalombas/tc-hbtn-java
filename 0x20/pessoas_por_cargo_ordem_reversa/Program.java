@@ -1,5 +1,3 @@
-package streamsCollectorsExer0;
-
 import java.util.*;
 
 public class Program {
