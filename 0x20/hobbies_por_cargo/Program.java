@@ -26,11 +26,11 @@ public class Program {
         List<Pessoa> todasPessoas = List.of(pessoa1, pessoa2, pessoa3, pessoa4, pessoa5,
                 pessoa6, pessoa7, pessoa8, pessoa9, pessoa10);
 
-        Map<String, TreeSet<String>> pessoas1 = ConsultaPessoas.obterHobbiesPorCargo(todasPessoas);
-        Map<String, TreeSet<String>> pessoas2 = ConsultaPessoas.obterHobbiesPorCargo(
+        Map<String, List<String>> pessoas1 = ConsultaPessoas.obterHobbiesPorCargo(todasPessoas);
+        Map<String, List<String>> pessoas2 = ConsultaPessoas.obterHobbiesPorCargo(
                 List.of(pessoa1, pessoa2, pessoa3, pessoa4, pessoa9, pessoa10)
         );
-        Map<String, TreeSet<String>> pessoas3 = ConsultaPessoas.obterHobbiesPorCargo(
+        Map<String, List<String>> pessoas3 = ConsultaPessoas.obterHobbiesPorCargo(
                 List.of(pessoa1, pessoa3, pessoa4, pessoa5, pessoa9)
         );
 
