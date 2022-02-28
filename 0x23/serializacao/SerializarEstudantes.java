@@ -9,6 +9,7 @@ public class SerializarEstudantes<T> {
         this.nomeArquivo = nomeArquivo;
     }
 
+    @SuppressWarnings("unchecked")
     public void serializar(List<Estudante> estudantes) {
 
         FileOutputStream fos = null;
@@ -34,6 +35,7 @@ public class SerializarEstudantes<T> {
         }
     }
 
+    @SuppressWarnings("unchecked")
     public List<Estudante> desserializar() {
         List<Estudante> estudantes = null;
         FileInputStream fis = null;
