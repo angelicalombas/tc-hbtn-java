@@ -1,4 +1,4 @@
-package pacoteJARExer0;
+package com.holbertonschool.matematica;
 
 public class Aritmeticos {
 
